@@ -1,0 +1,20 @@
+cabal-version:       >=1.10
+name:                er-wallpaper
+version:             0.1.0.0
+synopsis:            A script for changing wallpaper and setting color schemes, for Linux.
+homepage:            https://github.com/emmanuelrosa/er-wallpaper
+bug-reports:         https://github.com/emmanuelrosa/er-wallpaper/issues
+license: MIT
+license-file:        LICENSE
+copyright:           (c) 2019 Emmanuel Rosa
+author:              Emmanuel Rosa
+maintainer:          emmanuelrosa@protonmail.com
+build-type:          Simple
+stability:           stable
+
+executable er-wallpaper
+  main-is:             Main.hs
+  build-depends:       base >=4.13 && <4.14, turtle
+  default-language:    Haskell2010
+  default-extensions:  CPP
+  cpp-options:         -D_ER_PATH_WAL_=\"usr/bin/wal\" -D_ER_PATH_BETTERLOCKSCREEN_=\"/usr/bin/betterlockscreen\"
